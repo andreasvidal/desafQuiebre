@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Scada:wght@400;700&display=swap');
+
+body, html{
+    font-family: 'Scada', sans-serif;
+}
+
+:root{
+    --color-p-form: #EBE1EF;
+    --color-p-section: #170025;
+    --bg-color-form: #170025;
+    --bg-footer: #0E0016;
+    --bg-btn: #8B54FF;
+    --bg-color-carrusel: #8B54FF;
+    --input-border-color: #9CA6FF;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+/*HEADER*/
+.header{
+    width: max-content;
+}
+/*FORM SECTION*/
+
+.ContainerSection{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+text-align: center;
+margin: 3rem auto;
+width: 55%;
+min-height: 20vh;
+padding: 2rem;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    padding: 2rem;
+    margin: 3rem auto;
+    box-shadow: 2px 2px 4px rgb(0 0 0 / 10%);
+    background-color: var(--bg-color-form);
+}
+
+.input{
+    border-radius: 0.3rem;
+    margin: 0.5rem;
+    border: 0.1rem solid #9CA6FF;
+}
+
+/*CARRUSEL*/
+
+.picture-slice{
+    display: flex;
+justify-content: space-between;
+margin: 3rem;
+padding: 1.5rem;
+background-color: var(--bg-color-carrusel);
+}
+
+/*FOOTER*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 5%;
+    background: var(--bg-footer);
+}
+
+/*MEDIA*/
+
+@media (max-width: 900px){
+    .container {
+        flex-direction: column;
+    }
+}
