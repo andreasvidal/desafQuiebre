@@ -1,138 +1,150 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Scada:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Scada:wght@400;700&display=swap");
 
-body, html{
-    font-family: 'Scada', sans-serif;
-}
-
-:root{
-    --color-p-form: #EBE1EF;
-    --color-p-section: #170025;
-    --bg-color-form: #170025;
-    --bg-footer: #0E0016;
-    --bg-btn: #8B54FF;
-    --bg-color-carrusel: #8B54FF;
-    --input-border-color: #9CA6FF;
+body,
+html {
+  font-family: "Scada", sans-serif;
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
+:root {
+  --color-p-form: #ebe1ef;
+  --color-p-section: #170025;
+  --bg-color-form: #170025;
+  --bg-footer: #0e0016;
+  --bg-btn: #8b54ff;
+  --bg-color-carrusel: #8b54ff;
+  --input-border-color: #9ca6ff;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
 }
 
 /*HEADER*/
-.header{
-    width: max-content;
+
+.slider-container {
+  width: 100vw;
+  margin: 0 auto;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease-in-out;
+  text-align: center;
 }
 
-.imgBanner{
-    width: 1350px;
-}
 /*FORM SECTION*/
 
-.ContainerSection{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-text-align: center;
-margin: 3rem auto;
-width: 55%;
-min-height: 20vh;
-padding: 2rem;
+.ContainerSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  margin: 3rem auto;
+  width: 55%;
+  min-height: 20vh;
+  padding: 2rem;
 }
 
-
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 45%;
-    padding: 2rem;
-    margin: 3rem auto;
-    box-shadow: 2px 2px 4px rgb(0 0 0 / 10%);
-    background-color: var(--bg-color-form);
-    border-radius: 5%;
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  padding: 2rem;
+  margin: 3rem auto;
+  box-shadow: 2px 2px 4px rgb(0 0 0 / 10%);
+  background-color: var(--bg-color-form);
+  border-radius: 5%;
 }
 
-.input, .btnSend{
-    border-radius: 0.3rem;
-    margin: 0.5rem;
-    border: 0.2rem solid #9CA6FF;
-    padding: 0.3rem;
-    outline: none;
-    font-size: 1rem;
+.input,
+.btnSend {
+  border-radius: 0.3rem;
+  margin: 0.5rem;
+  border: 0.2rem solid #9ca6ff;
+  padding: 0.3rem;
+  outline: none;
+  font-size: 1rem;
 }
 
-.input:hover{
-    border: 0.3rem solid #8B54FF;
-    transition: .5s;
+.input:hover {
+  border: 0.3rem solid #8b54ff;
+  transition: 0.5s;
 }
 
-.btnSend{
-    background: var(--bg-btn);
-    color: var(--color-p-form);
+.btnSend {
+  background: var(--bg-btn);
+  color: var(--color-p-form);
 }
 
-.btnSend:hover{
-    background: var(--input-border-color);
-    color: var(--bg-color-form);
-    transition: .5s;
-    font-weight: bold;
+.btnSend:hover {
+  background: var(--input-border-color);
+  color: var(--bg-color-form);
+  transition: 0.5s;
+  font-weight: bold;
 }
 
-input::placeholder{
-    color: var(--bg-color-carrusel);
+input::placeholder {
+  color: var(--bg-color-carrusel);
 }
 
 /*TEXT SECTION*/
-h1, p{
-    color: var(--color-p-section);
+h1,
+p {
+  color: var(--color-p-section);
 }
 
-h1{
-    font-size: 2rem;
-    margin-bottom: 1rem;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.line{
-    border-left: 3rem solid #8B54FF;
-    width:100%;
+.line {
+  border-left: 3rem solid #8b54ff;
+  width: 100%;
 }
 
 /*CARRUSEL*/
 
-.picture-slice{
-display: flex;
-justify-content: space-between;
-margin: 3rem;
-padding: 1.5rem;
-width: fit-content;
-background-color: var(--bg-color-carrusel);
+.carroussel {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem;
+  padding: 1.5rem;
+  width: fit-content;
+  background-color: var(--bg-color-carrusel);
 }
-.picture-slice>img{
-    width: 33.3333%;
-    margin: 0.5rem;
-
+.carroussel > img {
+  width: 33.3333%;
+  margin: 0.5rem;
 }
 /*FOOTER*/
-.footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5rem;
-    padding: 5%;
-    background: var(--bg-footer);
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 5%;
+  background: var(--bg-footer);
 }
 
 /*MEDIA*/
 
-@media (max-width: 900px){
-    .container {
-        flex-direction: column;
-    }
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
 }
