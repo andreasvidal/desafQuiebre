@@ -28,6 +28,10 @@ body, html{
 .header{
     width: max-content;
 }
+
+.imgBanner{
+    width: 1350px;
+}
 /*FORM SECTION*/
 
 .ContainerSection{
@@ -52,24 +56,69 @@ padding: 2rem;
     margin: 3rem auto;
     box-shadow: 2px 2px 4px rgb(0 0 0 / 10%);
     background-color: var(--bg-color-form);
+    border-radius: 5%;
 }
 
-.input{
+.input, .btnSend{
     border-radius: 0.3rem;
     margin: 0.5rem;
-    border: 0.1rem solid #9CA6FF;
+    border: 0.2rem solid #9CA6FF;
+    padding: 0.3rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+.input:hover{
+    border: 0.3rem solid #8B54FF;
+    transition: .5s;
+}
+
+.btnSend{
+    background: var(--bg-btn);
+    color: var(--color-p-form);
+}
+
+.btnSend:hover{
+    background: var(--input-border-color);
+    color: var(--bg-color-form);
+    transition: .5s;
+    font-weight: bold;
+}
+
+input::placeholder{
+    color: var(--bg-color-carrusel);
+}
+
+/*TEXT SECTION*/
+h1, p{
+    color: var(--color-p-section);
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.line{
+    border-left: 3rem solid #8B54FF;
+    width:100%;
 }
 
 /*CARRUSEL*/
 
 .picture-slice{
-    display: flex;
+display: flex;
 justify-content: space-between;
 margin: 3rem;
 padding: 1.5rem;
+width: fit-content;
 background-color: var(--bg-color-carrusel);
 }
+.picture-slice>img{
+    width: 33.3333%;
+    margin: 0.5rem;
 
+}
 /*FOOTER*/
 .footer{
     display: flex;
