@@ -183,7 +183,12 @@ h1 {
   padding: 5%;
   background: var(--bg-footer);
 }
-
+/*ERROR MSG*/
+.error{
+    color: red;
+    margin-left: 1rem;
+    padding-bottom: 0.5rem;
+}
 /*MEDIA*/
 
 @media (max-width: 900px) {

@@ -57,28 +57,46 @@
           </div>
         </section>
         <span class="line"></span>
-        <form class="form" action="">
+        <form class="form" id="formId" action="">
             <h1 class="title-form">Te Contactamos!</h1>
-          <input class="input" 
-          type="text" 
+          <input 
+          class="input text" 
+          type="text " 
           name="username"
           id="username"
           placeholder="Nombre" />
-          <input class="input" 
+          <div class="error"></div>
+          <input 
+          class="input text" 
           type="text" 
+          name="lastname"
+          id="lastname"
           placeholder="Apellido" />
+          <div class="error"></div>
           <input
             class="input"
             type="email"
+            name="emal"
+            id="email"
             placeholder="example@tucorreo.com"
           />
+          <div class="error"></div>
           <input
-            class="input"
+            class="input number"
             type="phone"
+            name="phone"
+            id="phone"
             placeholder="+56911111111"
             maxlength="12"
           />
-          <input class="input" type="text" placeholder="edad" maxlength="2" />
+          <div class="error number"></div>
+          <input class="input" 
+          type="text" 
+          name="age"
+          id="age"
+          placeholder="edad" 
+          maxlength="2" />
+          <div class="error"></div>
           <button class="btnSend">Enviar</button>
         </form>
       </div>
