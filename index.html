@@ -16,32 +16,34 @@
   </head>
   <body>
       <header class="slider-container">
-        <picture class="slide slideAll">
-          <img
+    <button class="slide-arrow" id="slide-arrow-prev"><i class='bx bx-chevron-left'></i></button>
+    <button class="slide-arrow" id="slide-arrow-next"><i class='bx bx-chevron-right'></i></button>
+    <ul class="slides-container" id="slides-container">
+        <li class="slide"><img
             class="imgBanner"
             src="./assets/imgDesafio/Banner/Slider1_1900x450.png"
             alt="image banner"
           />
-        </picture>
-        <picture class="slide slideAll">
-          <img
+</li>
+        <li class="slide">
+            <img
             class="imgBanner"
             src="./assets/imgDesafio/Banner/Slider2_1900x450.png"
             alt="image banner"
           />
-        </picture>
-    
-        <picture class="slide slideAll">
-          <img
+
+        </li>
+        <li class="slide">
+            <img
             class="imgBanner"
             src="./assets/imgDesafio/Banner/Slider3_1900x450.png"
             alt="image banner"
           />
-        </picture> 
+        </li>
+    </ul>
     </header>
+      
     <div class="btn-container">
-        <button class="arrow nextBtn" onclick="carousel()"><i class='bx bx-chevron-left'></i></button>
-        <button class="arrow prevBtn" onclick="carousel()"><i class='bx bx-chevron-right'></i></i></button>
     </div> 
     <main>
       <div class="container">
@@ -139,6 +141,9 @@
           />
         </picture>
       </div>
+      <!--<button class="arrow nextBtn"><i class='bx bx-chevron-left'></i></button>
+      <button class="arrow prevBtn"><i class='bx bx-chevron-right'></i></i></button>
+      <span class="colorBottom"></span>-->
     </main>
       <footer class="footer">
         <a class="" href="#"><img class="unicorn-img" src="./assets/unicorn.png" alt=""/></a>
@@ -148,10 +153,10 @@
           <a href="#">Contactos</a>
         </span>
         <span class="info-uf">
-        <a id="date" href="#"></a>
         <a id="UF" href="#"></a>
+        <p id="date" href="#"></p>
     </span>
-        <a class="border" href="https://github.com/andreasvidal/desafQuiebre.git"
+        <a class="border link-repo" href="https://github.com/andreasvidal/desafQuiebre.git"
           ><i class="bx bxs-copyright">copy right Andrea Salas 2022</i></a
         >
       </footer>

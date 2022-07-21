@@ -64,14 +64,15 @@ let span = d.getElementsByClassName("close")[0];
 let textModal = d.getElementsByClassName('modalTxt')
 
 // cuando se da click, se abre modal 
-btn.onclick = () => {
+btn.onclick = (empty) => {
+    if(empty !== ""){
      modal.style.display = "block";
      let text = d.createElement('p')
      text.classList.add('modalTxt')
-     console.log(text.innerHTML = "hola")
-     text.innerHTML = `¡Gracias por cotizar con nosotros ${username.value} ${lastname.value} uno de nuestros ejecutivos se contactara al numero ${phone.value} y recibirás  un email a tu correo ${email.value} 🏠! `
+     text.innerHTML = `¡Gracias por cotizar con nosotros ${username.value} ${lastname.value} uno de nuestros ejecutivos se contactara al numero ${phone.value} y recibirás a tu correo ${email.value} más información 🏠! `
      // se agrega [0] para resolver error en appendChild()
      textModal[0].appendChild(text)
+    }
 }
 // cuando el usuario da click a (x), cierra el modal
 span.onclick = () => {
@@ -84,60 +85,43 @@ window.onclick = (event) => {
   }
 }
 
-//SLIDE BANNER
-const slides = d.querySelectorAll('.imgBanner');
-const nextBtn = d.querySelector('.nextBtn');
-const prevBtn = d.querySelector('.prevBtn');
+/*//SLIDE BANNER
+//OBTENER VALORES DEL DOM PARA SLIDE 
+const sliderContainer = d.getElementById('slider-container');
+const slide = d.querySelector('.slide');
+const prevBtn = d.getElementById('slide-arrow-prev');
+const nextBtn = d.getElementById('slide-arrow-next');
 
-slides.forEach((slide, index) => {
-    slide.style.transform = `${index * 100}%`
+//EVENTO A BOTON NEXT
+nextBtn.addEventListener('click', () => {
+    const slideWidth = slide.clientWidth;
+    sliderContainer.scrollLeft += slideWidth;
 });
 
-let counter = 0;
-nextBtn.addEventListener('click',  (e) =>{
-    e.preventDefault()
-    counter++;
-    carousel()
-})
+prevBtn.addEventListener('click', () => {
+    const slideWidth = slide.clientWidth;
+    sliderContainer.scrollLeft -= slideWidth; 
+})*/
 
-prevBtn.addEventListener('click',  (e) =>{
-    e.preventDefault()
-    counter--;
-    carousel()
-})
-
-const carousel = () => {
-    if (counter < slides.length - 1){
-        nextBtn.style.display = 'block';
-    }else {
-        nextBtn.style.display = 'none';
-    }
-    if (counter > 0){
-        prevBtn.style.display = 'block';
-    }else {
-        prevBtn.style.display = 'none';
-    }
-    slides.forEach( (slide) => {
-        slide.style.transform = `traslatex(-${counter * 100}%)`;
-    });
-}
-prevBtn.style.display = 'none';
 
 
 //DATE
-const date = new Date('Jul 12 2011');
+const date = new Date();
 const formatDate = (date, format) => {
     const map = {
         dd: date.getDate(),
         mm: date.getMonth() + 1,
         yy: date.getFullYear().toString().slice(-2),
         yyyy: date.getFullYear()
+        
     }
-    let dateAnchor = d.getElementById('date')
-    let createP = d.createElement('p')
-    console.log(dateAnchor , createP)
-    createP.innerHTML = `${dd/mm/yyyy}`
-    console.log(createP.innerHTML = `${dd/mm/yyyy}`)
-    dateAnchor.appendChild(createP)
+    console.log(formatDate(6))
     return format.replace(/dd|mm|yy|yyy/gi, matched => map[matched])
 }
+let dateToday = date.toLocaleDateString()
+let dateP = d.getElementById('date');
+let createEl = d.createElement('p');
+createEl.classList.add('date')
+createEl.innerHTML = `${dateToday}`
+dateP.appendChild(createEl)
+console.log(date.toLocaleDateString());
