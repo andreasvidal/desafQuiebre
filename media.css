@@ -3,3 +3,18 @@
         flex-direction: column;
     }
 }
+
+
+
+/*//DATE
+const date = new Date('Jul 12 2011');
+const formatDate = (date, format) => {
+    const map = {
+        dd: date.getDate(),
+        mm: date.getMonth() + 1,
+        yy: date.getFullYear().toString().slice(-2),
+        yyyy: date.getFullYear()
+    }
+    d.getElementById('date').innerHTML = `${dd/mm/yyyy}`
+    return format.replace(/dd|mm|yy|yyy/gi, matched => map[matched])
+}*/

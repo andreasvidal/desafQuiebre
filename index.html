@@ -15,24 +15,23 @@
     <title>Quiebre</title>
   </head>
   <body>
-    <main>
       <header class="slider-container">
-        <picture class="slide">
+        <picture class="slide slideAll">
           <img
             class="imgBanner"
             src="./assets/imgDesafio/Banner/Slider1_1900x450.png"
             alt="image banner"
           />
         </picture>
-        <picture class="slide">
+        <picture class="slide slideAll">
           <img
             class="imgBanner"
             src="./assets/imgDesafio/Banner/Slider2_1900x450.png"
             alt="image banner"
           />
         </picture>
-
-        <picture class="slide">
+    
+        <picture class="slide slideAll">
           <img
             class="imgBanner"
             src="./assets/imgDesafio/Banner/Slider3_1900x450.png"
@@ -41,19 +40,19 @@
         </picture> 
     </header>
     <div class="btn-container">
-        <button class="arrow nextBtn"><i class='bx bx-chevron-left'></i></button>
-        <button class="arrow prevBtn"><i class='bx bx-chevron-right'></i></i></button>
+        <button class="arrow nextBtn" onclick="carousel()"><i class='bx bx-chevron-left'></i></button>
+        <button class="arrow prevBtn" onclick="carousel()"><i class='bx bx-chevron-right'></i></i></button>
     </div> 
+    <main>
       <div class="container">
         <section class="ContainerSection">
           <div class="text">
-            <h1 class="title">lorem</h1>
+            <h1 class="title">Déjanos tus datos</h1>
             <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              eaque saepe assumenda dolorem expedita corporis temporibus
-              perferendis debitis odit dolore officiis quae hic, sapiente
-              impedit aliquid excepturi amet laudantium. Eos!
+                ¿Tienes alguna duda, sugerencia o consulta?
+                Te contactaremos a la brevedad con más información de tu interés! 💜 
             </p>
+            <img class="house" src="./assets/house.png" alt="">
           </div>
         </section>
         <span class="line"></span>
@@ -62,13 +61,16 @@
           <input 
           class="input text" 
           type="text " 
+          value=""
           name="username"
           id="username"
           placeholder="Nombre" />
+          <p id="valueInput"></p> 
           <div class="error"></div>
           <input 
           class="input text" 
           type="text" 
+          value=""
           name="lastname"
           id="lastname"
           placeholder="Apellido" />
@@ -76,6 +78,7 @@
           <input
             class="input"
             type="email"
+            value=""
             name="emal"
             id="email"
             placeholder="example@tucorreo.com"
@@ -84,6 +87,7 @@
           <input
             class="input number"
             type="phone"
+            value=""
             name="phone"
             id="phone"
             placeholder="+56911111111"
@@ -93,29 +97,41 @@
           <input class="input" 
           type="text" 
           name="age"
+          value=""
           id="age"
           placeholder="edad" 
           maxlength="2" />
           <div class="error"></div>
-          <button class="btnSend">Enviar</button>
+          <button class="btnSend" id="btn">Enviar</button>
         </form>
       </div>
+              <!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p class="modalTxt"></p>
+    </div>
+  </div>
+      <div class="title-cont-corousel">
+        <h1 class="title-carousel">Nuestros Clientes</h1>
+    </div>
       <div class="carousel">
-        <picture class="picture-carousel">
+        <picture class="picture-carousel slideAll">
           <img
             class="img-carousel"
             src="./assets/imgDesafio/Carrusel/Logos Rounded Border/Rounded1.png"
             alt=""
           />
         </picture>
-          <picture class="picture-carousel">
+          <picture class="picture-carousel slideAll">
           <img
             class="img-carousel"
             src="./assets/imgDesafio/Carrusel/Logos Rounded Border/Rounded2.png"
             alt=""
           />
         </picture>
-          <picture class="picture-carousel">
+          <picture class="picture-carousel slideAll">
           <img
             class="img-carousel"
             src="./assets/imgDesafio/Carrusel/Logos Rounded Border/Rounded3.png"
@@ -123,19 +139,22 @@
           />
         </picture>
       </div>
+    </main>
       <footer class="footer">
-        <a href="#"><img src="./assets/logoFooter.png" alt=""/></a>
+        <a class="" href="#"><img class="unicorn-img" src="./assets/unicorn.png" alt=""/></a>
         <span class="info">
           <a href="#">Info</a>
           <a href="#">Nosotros</a>
           <a href="#">Contactos</a>
         </span>
-        <a href="#">uf y fecha</a>
-        <a href="https://github.com/andreasvidal/desafQuiebre.git"
+        <span class="info-uf">
+        <a id="date" href="#">`${formatDate}`</a>
+        <a id="UF" href="#"></a>
+    </span>
+        <a class="border" href="https://github.com/andreasvidal/desafQuiebre.git"
           ><i class="bx bxs-copyright">copy right Andrea Salas 2022</i></a
         >
       </footer>
-    </main>
     <script type="module" src="main.js"></script>
   </body>
 </html>
