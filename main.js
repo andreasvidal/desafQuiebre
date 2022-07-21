@@ -46,11 +46,11 @@ const validation = (id, index, message) => {
 }
 
 //UF DIARIA API
-fetch('https://mindicador.cl/api').then(function(response) {
+fetch('https://mindicador.cl/api').then((response) => {
     return response.json();
-}).then(function(dailyIndicators) {
+}).then((dailyIndicators) => {
     document.getElementById("UF").innerHTML = 'VALOR UF $ ' + dailyIndicators.uf.valor;
-}).catch(function(error) {
+}).catch((error) => {
     console.log('Requestfailed', error);
 });
 
@@ -66,10 +66,12 @@ let textModal = d.getElementsByClassName('modalTxt')
 // cuando se da click, se abre modal 
 btn.onclick = () => {
      modal.style.display = "block";
-     let text = modal.createElement('p')
-     text.innerHTML = `Gracias ${username}`
-     textModal.appendChiled(text)
-     console.log(text)
+     let text = d.createElement('p')
+     text.classList.add('modalTxt')
+     console.log(text.innerHTML = "hola")
+     text.innerHTML = `¡Gracias por cotizar con nosotros ${username.value} ${lastname.value} uno de nuestros ejecutivos se contactara al numero ${phone.value} y recibirás  un email a tu correo ${email.value} 🏠! `
+     // se agrega [0] para resolver error en appendChild()
+     textModal[0].appendChild(text)
 }
 // cuando el usuario da click a (x), cierra el modal
 span.onclick = () => {
@@ -120,3 +122,22 @@ const carousel = () => {
     });
 }
 prevBtn.style.display = 'none';
+
+
+//DATE
+const date = new Date('Jul 12 2011');
+const formatDate = (date, format) => {
+    const map = {
+        dd: date.getDate(),
+        mm: date.getMonth() + 1,
+        yy: date.getFullYear().toString().slice(-2),
+        yyyy: date.getFullYear()
+    }
+    let dateAnchor = d.getElementById('date')
+    let createP = d.createElement('p')
+    console.log(dateAnchor , createP)
+    createP.innerHTML = `${dd/mm/yyyy}`
+    console.log(createP.innerHTML = `${dd/mm/yyyy}`)
+    dateAnchor.appendChild(createP)
+    return format.replace(/dd|mm|yy|yyy/gi, matched => map[matched])
+}
