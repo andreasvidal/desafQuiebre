@@ -33,7 +33,7 @@ form.addEventListener('submit', (e) => {
     validation(age,4, 'debes ingresar tu edad');
 })
 
-//FUNCION DE VALIDACIÓN CAMPOS VACIOS
+//FUNCTION VALID EMPTY INPUT
 const validation = (id, index, message) => {
     if(id.value.trim() === ''){
         errorMsg[index].innerHTML = message
@@ -45,7 +45,7 @@ const validation = (id, index, message) => {
     
 }
 
-//UF DIARIA API
+//UF DALIY 
 fetch('https://mindicador.cl/api').then((response) => {
     return response.json();
 }).then((dailyIndicators) => {
@@ -57,10 +57,10 @@ fetch('https://mindicador.cl/api').then((response) => {
 //MODAL
 let modal = d.getElementById("myModal");
 
-// Span para cerrar modal
+// SPAN CLOSE DE MODAL
 let span = d.getElementsByClassName("close")[0];
 
-// texto modal
+// MODAL TEXT
 let textModal = d.getElementsByClassName('modalTxt')
 
 // cuando se da click, se abre modal 
@@ -70,15 +70,17 @@ btn.onclick = (empty) => {
      let text = d.createElement('p')
      text.classList.add('modalTxt')
      text.innerHTML = `¡Gracias por cotizar con nosotros ${username.value} ${lastname.value} uno de nuestros ejecutivos se contactara al numero ${phone.value} y recibirás a tu correo ${email.value} más información 🏠! `
-     // se agrega [0] para resolver error en appendChild()
+     // ADD [0] TO RESOLVE appendChild() ERROR
      textModal[0].appendChild(text)
+    }else{
+        modal.style.display = "none";
     }
 }
-// cuando el usuario da click a (x), cierra el modal
+// WHEN USER CLICK (x) ICON, CLOSE MODAL
 span.onclick = () => {
   modal.style.display = "none";
 }
-// cunado el usuario da click fuera del modal se cierra
+// CLOSE WHEN USER CLICK OUTSIDE THE SCREEN MODAL
 window.onclick = (event) => {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -86,7 +88,7 @@ window.onclick = (event) => {
 }
 
 //SLIDE BANNER
-//OBTENER VALORES DEL DOM PARA SLIDE 
+//GET DOM VALUE FOR SLIDE 
 let slider = d.querySelector('.slider-container');
 console.log(slider)
 let sliderIndividual = d.querySelectorAll('.content-slider');
@@ -94,10 +96,17 @@ console.log(sliderIndividual)
 let counter = 1;
 let width = sliderIndividual[0].clientWidth;
 console.log(width)
-let interval = 5000;
+let interval = 3000;
+//CAROUSEL
+/*let carousel = d.querySelector('.carousel');
+console.log(carousel)
+let imgIndividual = d.querySelectorAll('.slideAll');
+console.log(imgIndividual)*/
+
 
 window.addEventListener('resize', () => {
     width = sliderIndividual[0].clientWidth;
+    width = imgIndividual[0].clientWidth;
 })
 
 setInterval(() => {
@@ -106,7 +115,7 @@ setInterval(() => {
 
 const slides = () => {
     slider.style.transform = "translate("+(-width * counter)+"px)";
-    slider.style.transition = 'transfrom .8s'
+    slider.style.transition = 'transfrom .7s'
     counter++
 
     if (counter == sliderIndividual.length) {
@@ -117,6 +126,8 @@ const slides = () => {
         }, 1500);
     }
 }
+
+
 
 //DATE
 const date = new Date();
@@ -131,6 +142,7 @@ const formatDate = (date, format) => {
     console.log(formatDate(6))
     return format.replace(/dd|mm|yy|yyy/gi, matched => map[matched])
 }
+//SCRREN PRINT AN CHANGE DAILY
 let dateToday = date.toLocaleDateString()
 let dateP = d.getElementById('date');
 let createEl = d.createElement('p');

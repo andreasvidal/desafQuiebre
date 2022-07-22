@@ -9,79 +9,90 @@
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!-- FAVICON -->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="media.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Quiebre</title>
   </head>
   <body>
-      <header class="header">
-    <button class="slide-arrow" id="slide-arrow-prev"><i class='bx bx-chevron-left'></i></button>
-    <button class="slide-arrow" id="slide-arrow-next"><i class='bx bx-chevron-right'></i></button>
-    <div class="container-header">
-    <div class="slider-container">
-    <section class="content-slider">
-    <img
-    class="img-size"
-            src="./assets/imgDesafio/Banner/Slider1_1900x450.png"
-            alt="image banner"
-          />
-</section>
-<section class="content-slider">
-    <img
-    class="img-size"
-            src="./assets/imgDesafio/Banner/Slider2_1900x450.png"
-            alt="image banner"
-          />
-</section>
-<section class="content-slider">
-    <img
-    class="img-size"
-            src="./assets/imgDesafio/Banner/Slider3_1900x450.png"
-            alt="image banner"
-          />
-</section>
-<section class="content-slider">
-    <img
-    class="img-size"
-            src="./assets/imgDesafio/Banner/Slider1_1900x450.png"
-            alt="image banner"
-          />
-</section>
-</div>
-</div>
+    <!-- SLIDER HEADER -->
+    <header class="header">
+      <!-- BTN SLIDER -->
+      <button class="slide-arrow" id="slide-arrow-prev">
+        <i class="bx bx-chevron-left"></i>
+      </button>
+      <button class="slide-arrow" id="slide-arrow-next">
+        <i class="bx bx-chevron-right"></i>
+      </button>
+      <div class="container-header">
+        <div class="slider-container">
+          <picture class="content-slider">
+            <img
+              class="img-size"
+              src="./assets/imgDesafio/Banner/Slider1_1900x450.png"
+              alt="image banner"
+            />
+          </picture>
+          <picture class="content-slider">
+            <img
+              class="img-size"
+              src="./assets/imgDesafio/Banner/Slider2_1900x450.png"
+              alt="image banner"
+            />
+          </picture>
+          <section class="content-slider">
+            <img
+              class="img-size"
+              src="./assets/imgDesafio/Banner/Slider3_1900x450.png"
+              alt="image banner"
+            />
+          </picture>
+          <section class="content-slider">
+            <img
+              class="img-size"
+              src="./assets/imgDesafio/Banner/Slider1_1900x450.png"
+              alt="image banner"
+            />
+          </picture>
+        </div>
+      </div>
     </header>
     <main>
+        <!-- MAIN CONTENT -->
       <div class="container">
         <section class="ContainerSection">
           <div class="text">
             <h1 class="title">Déjanos tus datos</h1>
             <p class="description">
-                ¿Tienes alguna duda, sugerencia o consulta?
-                Te contactaremos a la brevedad con más información de tu interés! 💜 
+              ¿Tienes alguna duda, sugerencia o consulta? Te contactaremos a la
+              brevedad con más información de tu interés! 💜
             </p>
-            <img class="house" src="./assets/house.png" alt="">
+            <img class="house" src="./assets/house.png" alt="" />
           </div>
         </section>
         <span class="line"></span>
+        <!-- FORM SECTION -->
         <form class="form" id="formId" action="">
-            <h1 class="title-form">Te Contactamos!</h1>
-          <input 
-          class="input text" 
-          type="text " 
-          value=""
-          name="username"
-          id="username"
-          placeholder="Nombre" />
-          <p id="valueInput"></p> 
+          <h1 class="title-form">Te Contactamos!</h1>
+          <input
+            class="input text"
+            type="text "
+            value=""
+            name="username"
+            id="username"
+            placeholder="Nombre"
+          />
+          <p id="valueInput"></p>
           <div class="error"></div>
-          <input 
-          class="input text" 
-          type="text" 
-          value=""
-          name="lastname"
-          id="lastname"
-          placeholder="Apellido" />
+          <input
+            class="input text"
+            type="text"
+            value=""
+            name="lastname"
+            id="lastname"
+            placeholder="Apellido"
+          />
           <div class="error"></div>
           <input
             class="input"
@@ -102,28 +113,32 @@
             maxlength="12"
           />
           <div class="error number"></div>
-          <input class="input" 
-          type="text" 
-          name="age"
-          value=""
-          id="age"
-          placeholder="edad" 
-          maxlength="2" />
+          <input
+            class="input"
+            type="text"
+            name="age"
+            value=""
+            id="age"
+            placeholder="edad"
+            maxlength="2"
+          />
           <div class="error"></div>
           <button class="btnSend" id="btn">Enviar</button>
         </form>
       </div>
-              <!-- The Modal -->
-<div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p class="modalTxt"></p> 
-    </div>
-  </div>
+      <!-- THE MODAL -->
+      <div id="myModal" class="modal">
+        <!-- MODAL CONTENT -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <!--MODAL TEXT-->
+          <p class="modalTxt"></p>
+        </div>
+      </div>
+      <!-- CAROUSEL -->
       <div class="title-cont-corousel">
         <h1 class="title-carousel">Nuestros Clientes</h1>
-    </div>
+      </div>
       <div class="carousel">
         <picture class="picture-carousel slideAll">
           <img
@@ -132,40 +147,75 @@
             alt=""
           />
         </picture>
-          <picture class="picture-carousel slideAll">
+        <picture class="picture-carousel slideAll">
           <img
             class="img-carousel"
             src="./assets/imgDesafio/Carrusel/Logos Rounded Border/Rounded2.png"
             alt=""
           />
         </picture>
-          <picture class="picture-carousel slideAll">
+        <picture class="picture-carousel slideAll">
           <img
             class="img-carousel"
             src="./assets/imgDesafio/Carrusel/Logos Rounded Border/Rounded3.png"
             alt=""
           />
         </picture>
+        <picture class="picture-carousel slideAll">
+            <img
+              class="img-carousel"
+              src="./assets/imgDesafio/Carrusel/Logos Rounded Border/Rounded1.png"
+              alt=""
+            />
+          </picture>
+          <picture class="picture-carousel slideAll">
+            <img
+              class="img-carousel"
+              src="./assets/imgDesafio/Carrusel/Logos Rounded Border/Rounded2.png"
+              alt=""
+            />
+          </picture>
+          <picture class="picture-carousel slideAll">
+            <img
+              class="img-carousel"
+              src="./assets/imgDesafio/Carrusel/Logos Rounded Border/Rounded3.png"
+              alt=""
+            />
+          </picture>
       </div>
       <!--<button class="arrow nextBtn"><i class='bx bx-chevron-left'></i></button>
       <button class="arrow prevBtn"><i class='bx bx-chevron-right'></i></i></button>
       <span class="colorBottom"></span>-->
     </main>
-      <footer class="footer">
-        <a class="" href="#"><img class="unicorn-img" src="./assets/unicorn.png" alt=""/></a>
-        <span class="info">
-          <a href="#">Info</a>
-          <a href="#">Nosotros</a>
-          <a href="#">Contactos</a>
-        </span>
-        <span class="info-uf">
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+      <a class="" href="#"
+        ><img class="unicorn-img" src="./assets/unicorn.png" alt=""
+      /></a>
+      <!-- INFO -->
+      <span class="info">
+        <a href="#">Info</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contactos</a>
+      </span>
+      <!-- UF AND DATE -->
+      <span class="info-uf">
         <a id="UF" href="#"></a>
         <p id="date" href="#"></p>
-    </span>
-        <a class="border link-repo" href="https://github.com/andreasvidal/desafQuiebre.git"
-          ><i class="bx bxs-copyright">copy right Andrea Salas 2022</i></a
+      </span>
+      <!-- LINK TO REPO AND DEPLOY -->
+      <span class="info">
+        <a href="https://github.com/andreasvidal/desafQuiebre.git"
+          ><i class="bx bxs-copyright color">copy right Andrea Salas 2022</i></a
         >
-      </footer>
-      <script src="main.js"></script>
+        <a href="https://github.com/andreasvidal/desafQuiebre.git"
+          ><img
+            class="logo-github"
+            src="./assets/logoFooter.png"
+            alt="logo github"
+        /></a>
+      </span>
+    </footer>
+    <script src="main.js"></script>
   </body>
 </html>
