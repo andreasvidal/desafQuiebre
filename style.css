@@ -248,6 +248,7 @@ h1 {
   align-items: center;
   padding: 5%;
   background: var(--bg-footer);
+  width: auto;
 }
 
 .info,
@@ -260,7 +261,7 @@ h1 {
 }
 
 .logo-github {
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 .color {
@@ -393,4 +394,8 @@ a:hover {
   .logo-github {
     margin-left: 1rem;
   }
+  .unicorn-img,
+.a-img, .logo-github {
+  width: 2rem;
+}
 }

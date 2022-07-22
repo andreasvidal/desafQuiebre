@@ -18,11 +18,6 @@ age = id('age'),
 form = id('formId'),
 errorMsg = classes('error');
 
-
-//VALIDACIÓN CAMPOS SOLO TEXTO O NUMEROS
-const onlyNum = /[^0-9]/g;
-const onlyStrings = /[^a-zA-ZÑñáéíóúÁÉÍÓÚ\s]*$/g;
-
 //EVENTO PARA MOSTRAR INFORMACION AL USURAIO DE INPUT VACIOS
 form.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -54,7 +49,7 @@ fetch('https://mindicador.cl/api').then((response) => {
     console.log('Requestfailed', error);
 });
 
-//MODAL
+//MODAL ////// 
 let modal = d.getElementById("myModal");
 
 // SPAN CLOSE DE MODAL
@@ -97,12 +92,6 @@ let counter = 1;
 let width = sliderIndividual[0].clientWidth;
 console.log(width)
 let interval = 3000;
-//CAROUSEL
-/*let carousel = d.querySelector('.carousel');
-console.log(carousel)
-let imgIndividual = d.querySelectorAll('.slideAll');
-console.log(imgIndividual)*/
-
 
 window.addEventListener('resize', () => {
     width = sliderIndividual[0].clientWidth;
