@@ -377,8 +377,8 @@ a:hover {
   .form {
     width: auto;
   }
-  .carousel {
-    flex-direction: column;
+.carousel {
+    flex-direction: row;
   }
   .ContainerSection {
     width: 100%;
