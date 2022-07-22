@@ -85,25 +85,38 @@ window.onclick = (event) => {
   }
 }
 
-/*//SLIDE BANNER
+//SLIDE BANNER
 //OBTENER VALORES DEL DOM PARA SLIDE 
-const sliderContainer = d.getElementById('slider-container');
-const slide = d.querySelector('.slide');
-const prevBtn = d.getElementById('slide-arrow-prev');
-const nextBtn = d.getElementById('slide-arrow-next');
+let slider = d.querySelector('.slider-container');
+console.log(slider)
+let sliderIndividual = d.querySelectorAll('.content-slider');
+console.log(sliderIndividual)
+let counter = 1;
+let width = sliderIndividual[0].clientWidth;
+console.log(width)
+let interval = 5000;
 
-//EVENTO A BOTON NEXT
-nextBtn.addEventListener('click', () => {
-    const slideWidth = slide.clientWidth;
-    sliderContainer.scrollLeft += slideWidth;
-});
+window.addEventListener('resize', () => {
+    width = sliderIndividual[0].clientWidth;
+})
 
-prevBtn.addEventListener('click', () => {
-    const slideWidth = slide.clientWidth;
-    sliderContainer.scrollLeft -= slideWidth; 
-})*/
+setInterval(() => {
+    slides()
+}, interval);
 
+const slides = () => {
+    slider.style.transform = "translate("+(-width * counter)+"px)";
+    slider.style.transition = 'transfrom .8s'
+    counter++
 
+    if (counter == sliderIndividual.length) {
+        setTimeout(() => {
+            slider.style.transform = 'traslate()0px';
+            slider.style.transition = 'transform 0s';
+            counter = 1;
+        }, 1500);
+    }
+}
 
 //DATE
 const date = new Date();

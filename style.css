@@ -29,17 +29,42 @@ html {
 
 /*HEADER*/
 /*SLIDE*/
-.slider-container{
-    position: relative;
+.container-header {
+    width: 100%;
     overflow: hidden;
 }
 
-.slides-container{
-    height: calc(100vh - 2rem);
+.slider-container{
     width: 100%;
     display: flex;
-    margin: 0;
-    padding: 0;
+}
+.content-slider{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.content-slider:nth-child(2){
+background: var(--color-p-section);
+}
+
+.content-slider:nth-child(3){
+    background: var(--bg-btn);
+}
+
+.content-slider > img {
+width: 100%;
+}
+
+.content-slider > div {
+    width: 100%;
+}
+
+.img-size{
+    width: 100%;
+    height: 70vh;
 }
 
 .slide-arrow {
@@ -82,11 +107,7 @@ html {
     color: var(--bg-color-form);
 }
 
-.slide {
-    width: 100%;
-    height: 100%;
-    flex: 1 0 100%;
-}
+
 /*FORM SECTION*/
 
 .ContainerSection {
@@ -341,5 +362,11 @@ a:hover{
   }
   .ContainerSection{
     width: 100%;
+  }
+  .content-slider > img{
+    width: 100%;
+  }
+  .content-slider > div {
+    width: 40%;
   }
 }
